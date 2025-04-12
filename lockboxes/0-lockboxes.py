@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""
+Module 0-lockboxes
+This module provides a function to determine if all lockboxes can be opened.
+"""
+
+
 def canUnlockAll(boxes):
     """
     Determines if all the boxes can be opened.
@@ -17,7 +23,6 @@ def canUnlockAll(boxes):
         current_box = queue.pop(0)
         if current_box not in opened_boxes:
             opened_boxes.add(current_box)
-            # Add all keys from this box to the queue
             for key in boxes[current_box]:
                 if key not in opened_boxes and key < len(boxes):
                     queue.append(key)
