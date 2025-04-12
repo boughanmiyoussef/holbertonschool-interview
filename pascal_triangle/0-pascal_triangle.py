@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 def pascal_triangle(n):
     """
@@ -12,9 +12,9 @@ def pascal_triangle(n):
                        Returns an empty list if n <= 0.
     """
     if n <= 0:
-        return []  # Return an empty list if n <= 0
+        return []
 
-    triangle = [[1]]  # Initialize the triangle with the first row [1]
+    triangle = [[1]]
 
     for i in range(1, n):
         # Start each row with 1
