@@ -4,6 +4,7 @@ This function calculates the fewest number of operations
 (only Copy All and Paste) to get exactly n 'H' characters.
 """
 
+
 def minOperations(n):
     steps = 0
     i = 2
