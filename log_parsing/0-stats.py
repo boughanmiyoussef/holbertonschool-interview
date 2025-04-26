@@ -2,6 +2,7 @@
 """Log parser that prints stats every 10 lines or on interrupt."""
 
 import sys
+import select
 
 
 total_size = 0
@@ -17,26 +18,27 @@ def print_stats():
 
 
 try:
-    for line in sys.stdin:
-        parts = line.strip().split()
-        if len(parts) < 7:
-            continue
+    # Check if there's data to read from stdin
+    if select.select([sys.stdin], [], [], 0.1)[0]:
+        for line in sys.stdin:
+            parts = line.strip().split()
+            if len(parts) < 7:
+                continue
 
-        # Try to parse status and size
-        status = parts[-2]
-        size = parts[-1]
+            status = parts[-2]
+            size = parts[-1]
 
-        if status in valid_codes:
-            status_counts[status] = status_counts.get(status, 0) + 1
+            if status in valid_codes:
+                status_counts[status] = status_counts.get(status, 0) + 1
 
-        try:
-            total_size += int(size)
-        except ValueError:
-            continue
+            try:
+                total_size += int(size)
+            except ValueError:
+                continue
 
-        line_num += 1
-        if line_num % 10 == 0:
-            print_stats()
+            line_num += 1
+            if line_num % 10 == 0:
+                print_stats()
 
 except KeyboardInterrupt:
     print_stats()
