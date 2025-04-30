@@ -5,6 +5,7 @@ This module defines a function to check whether a list of integers
 represents a valid UTF-8 encoded sequence.
 """
 
+
 def validUTF8(data):
     """
     Checks if a list of integers represents a valid UTF-8 encoding.
