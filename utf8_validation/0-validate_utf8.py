@@ -1,16 +1,13 @@
-#!/usr/bin/python3
-"""
-Module for UTF-8 validation function.
-"""
-
 def validUTF8(data):
     """
     Checks if a list of integers represents a valid UTF-8 encoding.
     """
     expected_bytes = 0
+
     for number in data:
-        # Convert the number to an 8-bit binary string
+        number = number & 0xFF  # Only consider the last 8 bits
         binary = bin(number)[2:].zfill(8)
+
         if expected_bytes == 0:
             if binary.startswith('0'):
                 continue
@@ -23,8 +20,8 @@ def validUTF8(data):
             else:
                 return False
         else:
-            # We are expecting a continuation byte starting with '10'
             if not binary.startswith('10'):
                 return False
             expected_bytes -= 1
+
     return expected_bytes == 0
