@@ -7,7 +7,7 @@ import sys
 
 
 def print_usage_and_exit():
-    """Print usage message and exit with status 1."""
+    """Print usage message and exit with status 1"""
     print("Usage: nqueens N")
     sys.exit(1)
 
