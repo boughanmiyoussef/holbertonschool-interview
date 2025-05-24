@@ -2,7 +2,7 @@
 """
 Rotate a 2D matrix by 90 degrees clockwise in place.
 The matrix is modified in-place, meaning no new matrix is returned.
-This is done by first transposing the matrix (swap rows and columns) 
+This is done by first transposing the matrix (swap rows and columns)
 and then reversing each row.
 """
 
