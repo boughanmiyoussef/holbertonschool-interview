@@ -1,17 +1,24 @@
+#!/usr/bin/python3
+"""
+Rotate a 2D matrix by 90 degrees clockwise in place.
+The matrix is modified in-place, meaning no new matrix is returned.
+This is done by first transposing the matrix (swap rows and columns) 
+and then reversing each row.
+"""
+
 def rotate_2d_matrix(matrix):
     """
-    Rotate the n x n 2D matrix by 90 degrees clockwise in-place.
+    Rotate the n x n 2D matrix by 90 degrees clockwise in place.
 
-    The matrix will be rotated without using extra space,
-    meaning the rotation is done in-place. This is accomplished by:
-    1. Transposing the matrix (swap rows and columns).
-    2. Reversing each row to complete the 90-degree clockwise rotation.
+    The rotation is achieved in-place with the following steps:
+    1. Transpose the matrix (swap rows and columns).
+    2. Reverse each row to complete the 90-degree clockwise rotation.
 
     Args:
         matrix (list[list[int]]): A square 2D matrix to rotate.
 
     Returns:
-        None: The matrix is modified in-place.
+        None: The matrix is modified in place.
     """
     # Step 1: Transpose the matrix
     n = len(matrix)
