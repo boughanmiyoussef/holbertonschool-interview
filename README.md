@@ -1,7 +1,7 @@
 # 🧩 Holberton School – Technical Interview Preparation
 
 <p align="center">
-  <img src="images/interview.png" alt="Technical Interview Graphic" width="700"/>
+  <img src="images/interview.jpg" alt="Technical Interview Graphic" width="700"/>
 </p>
 
 ---
