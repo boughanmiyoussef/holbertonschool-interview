@@ -29,7 +29,6 @@ I strongly believe that mastering algorithms is essential not only for interview
 
 - 🔗 **LinkedIn:** https://linkedin.com/in/youssef-boughanmi-4990222a0  
 - 🧑‍💻 **GitHub:** https://github.com/boughanmiyoussef  
-- 🧰 **Portfolio:** Add link  
 - 📧 **Email:** yussefboughanmy@gmail.com  
 
 ---
